@@ -15,7 +15,6 @@ export default function Home() {
 let data = {
     name,
     email,
-    message,
     phone
   }
 fetch('/api/contact', {
