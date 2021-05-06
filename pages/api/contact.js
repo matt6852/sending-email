@@ -1,16 +1,11 @@
-
-
-
-import nodemailer from "nodemailer";
-
-// 25800852asdf
 export default function (req, res) {
   require("dotenv").config();
 
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
-      tls: {rejectUnauthorized: false},
+    tls: { rejectUnauthorized: false },
     port: 465,
+    requireTLS: true,
     host: "smtp.mail.ru",
     auth: {
       user: "sss.1993@internet.ru",
@@ -28,10 +23,10 @@ export default function (req, res) {
   };
   transporter.sendMail(mailData, function (err, info) {
     if (err) console.log(err);
-    else{
-        console.log(info);
-    } 
+    else {
+      console.log(info);
+    }
   });
-  
-  res.status(200).send({"status":"success"})
+
+  res.status(200).send({ status: "success" });
 }
