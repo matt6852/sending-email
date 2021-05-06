@@ -14,7 +14,7 @@ export default function (req, res) {
     host: "smtp.mail.ru",
     auth: {
       user: "sss.1993@internet.ru",
-      pass: "25800852asdf",
+      pass: process.env.password,
     },
     secure: true,
   });
