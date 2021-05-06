@@ -17,24 +17,25 @@ let data = {
     email,
     phone
   }
-fetch("https://angry-ride-094df3.netlify.app/api/contact", {
-  method: "POST",
-  headers: {
-    Accept: "application/json, text/plain, */*",
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(data),
-}).then((res) => {
-  console.log("Response received");
-  if (res.status === 200) {
-    console.log("Response succeeded!");
-    setSubmitted(true);
-    setName("");
-    setEmail("");
-    setPhone("");
-    setSubmitted(true);
-  }
-});
+fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  }).then((res) => {
+    console.log('Response received')
+    if (res.status === 200) {
+      console.log('Response succeeded!')
+      setSubmitted(true)
+      setName('')
+      setEmail('')
+      setPhone('')
+      setSubmitted(true)
+
+    }
+  })
 }
 
 
