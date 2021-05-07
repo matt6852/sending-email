@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import Yandexmap from "../components/Yandexmap";
+import Courusel from "../components/Courusel";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -40,12 +41,12 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <div className ={styles.center_2}>
+      <div className={styles.center_2}>
         <h2>Яндекс карта</h2>
       </div>
 
       <div className={styles.center}>
-        <Yandexmap />
+        {/* <Yandexmap /> */}
       </div>
       {submitted ? (
         <div>
@@ -56,9 +57,9 @@ export default function Home() {
         </div>
       ) : (
         <form className={styles.main}>
-          <div> <h2>
-            Регистрация
-          </h2>
+          <div>
+            {" "}
+            <h2>Регистрация</h2>
           </div>
           <label htmlFor="name">Name</label>
           <input
@@ -95,6 +96,7 @@ export default function Home() {
           <input onClick={(e) => handleSubmit(e)} type="submit" />
         </form>
       )}
+      {/* <Courusel /> */}
     </div>
   );
 }

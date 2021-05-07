@@ -4,12 +4,12 @@ export default function (req, res) {
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     tls: { rejectUnauthorized: false },
-    port: 465,
+    port: process.env.PORT,
     requireTLS: true,
-    host: "smtp.mail.ru",
+    host: process.env.HOST,
     auth: {
-      user: "sss.1993@internet.ru",
-      pass: process.env.password,
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
     },
     secure: true,
   });
