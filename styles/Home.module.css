@@ -120,7 +120,6 @@
   }
 }
 
-
 .inputGroup {
   height: 50%;
   width: 200%;
@@ -133,4 +132,13 @@
 }
 .inputField {
   height: 30px;
+}
+
+.center {
+  margin-bottom: 1rem;
+  border: 2px solid #ccc;
+  width: 90%;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  /* margin: auto; */
+  border-radius: 5px;
 }
