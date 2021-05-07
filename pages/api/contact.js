@@ -1,3 +1,4 @@
+require("dotenv").config();
 export default function (req, res) {
   require("dotenv").config();
 
