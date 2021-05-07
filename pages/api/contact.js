@@ -1,6 +1,7 @@
 require("dotenv").config();
 export default function (req, res) {
   require("dotenv").config();
+  console.log(process.env.PORT);
 
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
