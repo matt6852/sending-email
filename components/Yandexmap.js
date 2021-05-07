@@ -15,7 +15,7 @@ const Yandexmap = () => (
   <YMaps>
     <Map defaultState={mapData}
     width ={"100"}
-    height = {"400px"}
+    height = {"40vh"}
     // className = {styles.center}
     >
       {coordinates.map((coordinate,index) => (

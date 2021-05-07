@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className ={styles.center_2}>
         <h2>Яндекс карта</h2>
       </div>
 
