@@ -1,5 +1,5 @@
-require("dotenv").config();
-export default function (req, res) {
+
+export default async function  (req, res) {
   require("dotenv").config();
   console.log(process.env.PORT);
 
@@ -23,7 +23,7 @@ export default function (req, res) {
     html: `<div>Клиент имя ${req.body.name}</div><p>Номер ${req.body.phone} Email:
     ${req.body.email}</p>`,
   };
-  transporter.sendMail(mailData, function (err, info) {
+ await transporter.sendMail(mailData, function (err, info) {
     if (err) console.log(err);
     else {
       console.log(info);
