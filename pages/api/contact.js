@@ -1,12 +1,12 @@
 
 export default async function  (req, res) {
   require("dotenv").config();
-  console.log(process.env.PORT);
+  console.log(process.env.PORT,"check");
 
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     tls: { rejectUnauthorized: false },
-    port: process.env.PORT,
+    port: 465,
     requireTLS: true,
     host: process.env.HOST,
     logger: true,
