@@ -9,6 +9,9 @@ export default async function  (req, res) {
     port: process.env.PORT,
     requireTLS: true,
     host: process.env.HOST,
+    logger: true,
+    debug: true,
+    secureConnection: false,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASSWORD,
