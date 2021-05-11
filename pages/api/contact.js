@@ -6,7 +6,7 @@ export default async function  (req, res) {
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     tls: { rejectUnauthorized: false },
-    port: 465,
+    port: process.env.PORT,
     requireTLS: true,
     host: process.env.HOST,
     logger: true,
