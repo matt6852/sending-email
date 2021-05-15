@@ -1,14 +1,19 @@
 
 export default async function  (req, res) {
   require("dotenv").config();
-  console.log(process.env.PORT,"check");
+  console.log(
+    process.env.PORT,
+    "check",
+    process.env.HOST,
+    process.env.EMAIL,
+    process.env.PASSWORD
+  );
 
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     tls: { rejectUnauthorized: false },
-    port: process.env.PORT,
-    requireTLS: true,
-    host: process.env.HOST,
+    host:process.env.HOST,
+    port: 465,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASSWORD,
