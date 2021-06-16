@@ -1,6 +1,7 @@
 
 export default async function  (req, res) {
   require("dotenv").config();
+  console.log("work");
   console.log(
     process.env.PORT,
     "check",
